@@ -34,7 +34,7 @@ Add the bundles form theme to your twig configuration
 # Twig Configuration
 twig:
     form_themes:
-        - 'SfueReCaptchaBundle:Form:fields.html.twig'
+        - '@SfueReCaptcha/Form/fields.html.twig'
 ```
 
 Use the ReCaptchaType in any form you want to have a reCAPTCHA field
