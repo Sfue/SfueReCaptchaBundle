@@ -1,0 +1,5 @@
+sfue_re_captcha:
+    secret_missing: 'The secret for recaptcha validation is missing.'
+    secret_invalid: 'The secret parameter is invalid or malformed.'
+    re_captcha_empty: 'Please use the reCAPTCHA.'
+    re_captcha_invalid: 'The entered reCAPTCHA is not valid.'

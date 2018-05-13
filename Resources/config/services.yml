@@ -1,0 +1,20 @@
+services:
+    sfue_re_captcha.form_type:
+        class: Sfue\ReCaptchaBundle\Form\Type\ReCaptchaType
+        arguments: ['%sfue.re_captcha.site_key%']
+        tags:
+            - { name: form.type }
+
+    sfue_re_captcha.form_validator:
+        class: Sfue\ReCaptchaBundle\Validator\Constraints\ReCaptchaValidator
+        arguments:
+            - '%sfue.re_captcha.secret%'
+            - '@request_stack'
+        tags:
+            - { name: validator.constraint_validator }
+
+    sfue_re_captcha.extension.re_captcha_form_type:
+        class: Sfue\ReCaptchaBundle\Form\Extension\ReCaptchaTypeExtension
+        arguments: ['@request_stack']
+        tags:
+            - { name: form.type_extension, extended_type: Sfue\ReCaptchaBundle\Form\Type\ReCaptchaType }
